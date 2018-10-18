@@ -12,16 +12,17 @@
     {% else %}
 
     <hr />
-    Blog posts
+    <h2>Blog posts</h2>
     <br>
         {% for post in posts %}
-        <div style="background-color:orange">
-            <a href ="/display_post?swag={{post.id}}">{{post.post_title}}</a>
+        <div style="background-color:oldlace">
+            <h3><a href ="/display_post?swag={{post.id}}">{{post.post_title}}</a></h3>
             <br>
         </div>
         <div style="background-color:oldlace">
-        <h6>{{post.post_text}}</h6>
+        <p>{{post.post_text}}</p>
         </div>
+        <hr>
         {% endfor %}
     </div>
     {% endif %}
