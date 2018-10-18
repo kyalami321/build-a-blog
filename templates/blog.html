@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h1>Welcome to The Blog!</h1>
+    
+    <hr />
+
+    {% if posts|length == 0 %}
+    <p>No posts yet</p>
+    {% else %}
+
+    <hr />
+    Blog posts
+    <br>
+        {% for post in posts %}
+        <div style="background-color:orange">
+            <a href ="/display_post?swag={{post.id}}">{{post.post_title}}</a>
+            <br>
+        </div>
+        <div style="background-color:oldlace">
+        <h6>{{post.post_text}}</h6>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    
+    
+
+    
+{% endblock %}
